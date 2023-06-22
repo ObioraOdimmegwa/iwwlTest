@@ -53,6 +53,10 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
 	<!-- SCALE -->
 	<script>
         var viewportmeta = document.querySelector('meta[name="viewport"]');
@@ -83,8 +87,8 @@
 								<a href="./">Home</a>
 							</li>
 							<li><a href="./about">About</a></li>
-							<li class="active"><a href="./gallery">Gallery</a></li>
-							<li ><a href="./blog">Blog</a></li>
+							<li ><a href="./gallery">Gallery</a></li>
+							<li class="active"><a href="./blog">Blog</a></li>
 							<li style="padding-right: 30px;"><a href="./contact">Contact us</a></li>
 							<li><span><a class="btn btn-primary btn-lg" href="#" style="color: white;">Donate Now</a></span></li>
 						</ul>
@@ -100,113 +104,28 @@
 
                 <div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center heading-section animate-box">
-						<h3>UDO NA IFUNANYA IS OUR CULTURAL THEME.
-</h3>
-						
+                        
+						<h1 id="title">Blog title</h1>
+						<p id="date" style="margin-top: -20px; margin-bottom: 6px;">date and time</p>
+
 					</div>
 				</div>
 				
 			</div>
 
 			<div class="container">
-				
-				<div class="row">
-                    
-                    <div class="col-md-3">
-                        <div style="width: 100%; display: flex; justify-content: center; align-items: center; margin-top: 5px;">
-                            <img src="./images/gallery/g1.jpg" alt="" style="width: 280px; height: 280px;">
-                        </div>
-                    </div>
 
-                    <div class="col-md-3">
-                        <div style="width: 100%;  display: flex; justify-content: center; align-items: center; margin-top: 5px;">
-                            <img src="./images/gallery/g2.jpg" alt="" style="width: 280px; height: 280px;">
-                        </div>
-                    </div>
+				<div class="row row-bottom-padded-md" style="padding-left:20px; padding-right: 20px; margin-top: 0px;">
 
-                    <div class="col-md-3">
-                        <div style="width: 100%;  display: flex; justify-content: center; align-items: center; margin-top: 5px;">
-                            <img src="./images/gallery/g3.jpg" alt="" style="width: 280px; height: 280px;">
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div style="width: 100%;  display: flex; justify-content: center; align-items: center; margin-top: 5px;">
-                            <img src="./images/gallery/g4.jpg" alt="" style="width: 280px; height: 280px;">
-                        </div>
-                    </div>
-
-					<div class="col-md-3">
-                        <div style="width: 100%;  display: flex; justify-content: center; align-items: center; margin-top: 5px;">
-                            <img src="./images/gallery/g5.jpg" alt="" style="width: 280px; height: 280px;">
-                        </div>
-                    </div>
-
-					<div class="col-md-3">
-                        <div style="width: 100%;  display: flex; justify-content: center; align-items: center; margin-top: 5px;">
-                            <img src="./images/gallery/g6.jpg" alt="" style="width: 280px; height: 280px;">
-                        </div>
-                    </div>
-
-					<div class="col-md-3">
-                        <div style="width: 100%;  display: flex; justify-content: center; align-items: center; margin-top: 5px;">
-                            <img src="./images/gallery/g7.jpg" alt="" style="width: 280px; height: 280px;">
-                        </div>
-                    </div>
-
-					<div class="col-md-3">
-                        <div style="width: 100%;  display: flex; justify-content: center; align-items: center; margin-top: 5px;">
-                            <img src="./images/gallery/g8.jpg" alt="" style="width: 280px; height: 280px;">
-                        </div>
-                    </div>
-
-					<div class="col-md-3">
-                        <div style="width: 100%;  display: flex; justify-content: center; align-items: center; margin-top: 5px;">
-                            <img src="./images/gallery/g9.jpg" alt="" style="width: 280px; height: 280px;">
-                        </div>
-                    </div>
-
-					<div class="col-md-3">
-                        <div style="width: 100%;  display: flex; justify-content: center; align-items: center; margin-top: 5px;">
-                            <img src="./images/gallery/g10.jpg" alt="" style="width: 280px; height: 280px;">
-                        </div>
-                    </div>
-
-					<div class="col-md-3">
-                        <div style="width: 100%;  display: flex; justify-content: center; align-items: center; margin-top: 5px;">
-                            <img src="./images/gallery/g11.jpg" alt="" style="width: 280px; height: 280px;">
-                        </div>
-
-                	</div>
-
-					<div class="col-md-3">
-                        <div style="width: 100%;  display: flex; justify-content: center; align-items: center; margin-top: 5px;">
-                            <img src="./images/gallery/g12.jpg" alt="" style="width: 280px; height: 280px;">
-                        </div>
-                    </div>
-
-					<div class="col-md-3">
-                        <div style="width: 100%;  display: flex; justify-content: center; align-items: center; margin-top: 5px;">
-                            <img src="./images/gallery/g13.jpg" alt="" style="width: 280px; height: 280px;">
-                        </div>
-                    </div>
-
-					<div class="col-md-3">
-                        <div style="width: 100%;  display: flex; justify-content: center; align-items: center; margin-top: 5px;">
-                            <img src="./images/gallery/g14.jpg" alt="" style="width: 280px; height: 280px;">
-                        </div>
-                    </div>
-
-					<div class="col-md-3">
-                        <div style="width: 100%;  display: flex; justify-content: center; align-items: center; margin-top: 5px;">
-                            <img src="./images/gallery/g15.jpg" alt="" style="width: 280px; height: 280px;">
-                        </div>
-				
-					</div>
-
-		
+                    <p></p>
+					<p id="para1" style="text-align: start;"></p>
+                    <p id="para2" style="text-align: start;"></p>
+                    <p id="para3" style="text-align: start;"></p>
+                    <p id="para4" style="text-align: start;"></p>
+                    <p id="para5" style="text-align: start;"></p>
+                    <p></p>
+					
 				</div>
-
 			</div>
 
 		</div>
@@ -224,6 +143,7 @@
 								<a href="#"><i class="icon-instagram"></i></a>
 								<a href="#"><i class="icon-youtube"></i></a>
 							</p>
+
 							<p>Copyright 2023 IWWL. All Rights Reserved</p>
 						</div>
 					</div>
@@ -255,6 +175,7 @@
 	<!-- Superfish -->
 	<script src="js/hoverIntent.js"></script>
 	<script src="js/superfish.js"></script>
+	<script src="./js/blog3.js"></script>
 	
 	<!-- Main JS -->
 	<script src="js/main.js"></script>

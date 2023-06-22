@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>IWWL - Women supporting women </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="At the heart of every thriving society lies the empowerment of women. Recognizing this fundamental truth, our organization stands as a beacon of hope and support for igbo women in the diaspora. " />
+	<meta name="keywords" content="charity, women, iwwl, donate, support, . ," />
+	<meta name="author" content="IWWL" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="IWWL - Women supporting women"/>
+	<meta property = "og: image" itemprop="image" content = "https://iwwl.org/images/ogImg.png" />
+    <meta property="og:image:width" content="2500">
+    <meta property="og:image:height" content="1900">
+	<meta property="og:url" content="https://iwwl.org/"/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content="At the heart of every thriving society lies the empowerment of women. Recognizing this fundamental truth, our organization stands as a beacon of hope and support for igbo women in the diaspora."/>
+
+	<meta name="twitter:title" content="IWWL - Women supporting women" />
+	<meta name="twitter:image" content="https://iwwl.org/images/ogImg.png">
+    <meta property="twitter:image:width" content="2500">
+    <meta property="twitter:image:height" content="1900">
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="./images/favicon.ico">
+
+	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Superfish -->
+	<link rel="stylesheet" href="css/superfish.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+	<!-- SCALE -->
+	<script>
+        var viewportmeta = document.querySelector('meta[name="viewport"]');
+        if (viewportmeta) {
+            if (screen.width < 375) {
+                var newScale = screen.width / 375;
+                viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+            } else {
+                viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+            }
+        }
+    </script>
+
+	</head>
+	<body>
+		<div id="fh5co-wrapper">
+		<div id="fh5co-page">
+		
+		<header id="fh5co-header-section" class="sticky-banner">
+			<div class="container">
+				<div class="nav-header">
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+					<h1 id="fh5co-logo"><a href="./">IWWL</a></h1>
+					<!-- START #fh5co-menu-wrap -->
+					<nav id="fh5co-menu-wrap" role="navigation">
+						<ul class="sf-menu" id="fh5co-primary-menu">
+							<li >
+								<a href="./">Home</a>
+							</li>
+							<li><a href="./about">About</a></li>
+							<li><a href="./gallery">Gallery</a></li>
+							<li class="active"><a href="./blog">Blog</a></li>
+							<li ><a href="./contact">Contact us</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		
+		
+		<div id="fh5co-contact" class="animate-box">
+			<div class="container">
+				<div >
+					<div class="row">
+						
+						<div class="col-md-12">
+							<div class="row">
+
+								<h2 style="color: #bf0000; margin-bottom: 10px; width: 100%; text-align: center;">Upload a blog post</h2>
+								<p style="width: 100%; text-align: center; margin-bottom: 40px;">All fields marked with (<span style="color: red;">*</span>) are compulsory.</p>
+
+								<div class="col-md-6">
+									<div class="form-group">
+                                        <label  for="image" style="color: black;">Image <span style="color: red;">*</span> </label>
+										<input type="file"  id="image" accept="image/*" class="form-control">
+										<p style="color: red; font-size: 12px; margin-top: 10px; margin-left: 5px; display: none;" id="imageError"></p>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+                                        <label  style="color: black;" >Title <span style="color: red;">*</span> </label>
+										<input type="text" class="form-control" placeholder="Title of the blog post" id="title">
+
+										<p style="color: red; font-size: 12px; margin-top: 10px; margin-left: 5px; display: none;" id="titleError"></p>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+                                        <label  style="color: black;" >Password <span style="color: red;">*</span> </label>
+										<input type="password" class="form-control" placeholder="Admin Password" id="password">
+
+										<p style="color: red; font-size: 12px; margin-top: 10px; margin-left: 5px; display: none;" id="passwordError"></p>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+
+                                        <label  style="color: black;" >Description <span style="color: red;">*</span></label>
+
+										<textarea name=""  class="form-control" id="description" cols="30" rows="4" placeholder="A short description of the blog post"></textarea>
+										<p style="color: red; font-size: 12px; margin-top: 10px; margin-left: 5px; display: none;" id="descriptionError"></p>
+									</div>
+								</div>
+
+                                <div class="col-md-6">
+									<div class="form-group">
+
+                                        <label  style="color: black;" >Paragraph 1 <span style="color: red;">*</span></label>
+
+										<textarea name=""  class="form-control" id="para1" cols="30" rows="8" placeholder="First paragraph of the blog post"></textarea>
+										<p style="color: red; font-size: 12px; margin-top: 10px; margin-left: 5px; display: none;" id="para1Error"></p>
+									</div>
+								</div>
+
+                                <div class="col-md-6">
+									<div class="form-group">
+
+                                        <label  style="color: black;" >Paragraph 2 </label>
+
+										<textarea name=""  class="form-control" id="para2" cols="30" rows="8" placeholder="Second paragraph of the blog post"></textarea>
+										
+									</div>
+								</div>
+
+                                <div class="col-md-6">
+									<div class="form-group">
+
+                                        <label  style="color: black;" >Paragraph 3 </label>
+
+										<textarea name=""  class="form-control" id="para3" cols="30" rows="8" placeholder="Third paragraph of the blog post"></textarea>
+										
+									</div>
+								</div>
+
+                                <div class="col-md-6">
+									<div class="form-group">
+
+                                        <label  style="color: black;" >Paragraph 4 </label>
+
+										<textarea name=""  class="form-control" id="para4" cols="30" rows="8" placeholder="Fourth paragraph of the blog post"></textarea>
+										
+									</div>
+								</div>
+
+                                <div class="col-md-6">
+									<div class="form-group">
+
+                                        <label  style="color: black;" >Paragraph 5 </label>
+
+										<textarea name=""  class="form-control" id="para5" cols="30" rows="8" placeholder="Fifth paragraph of the blog post"></textarea>
+										
+									</div>
+								</div>
+
+								<div class="col-md-12">
+									<div class="form-group">
+										<button class="btn btn-primary" id="postButton" >Submit Post</button>
+										<p style="color: red; font-size: 12px; margin-top: 10px; margin-left: 5px; display: none;" id="btnError"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<!-- fh5co-blog-section -->
+		<footer style="background-color: #0d0d86;">
+			<div id="footer" style="background-color: #0d0d86;">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 text-center">
+							
+							<p>Copyright 2023 IWWL. All Rights Reserved</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	
+
+	</div>
+	<!-- END fh5co-page -->
+
+	</div>
+	<!-- END fh5co-wrapper -->
+
+	<!-- jQuery -->
+
+
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/sticky.js"></script>
+
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Superfish -->
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.js"></script>
+	
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
+	<script src="./js/blog.js"></script>
+
+	<script src="https://smtpjs.com/v3/smtp.js">
+	</script>
+
+	</body>
+</html>
+

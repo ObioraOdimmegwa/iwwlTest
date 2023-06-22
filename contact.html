@@ -75,7 +75,7 @@
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-					<h1 id="fh5co-logo"><a href="./">IWWL</a></h1>
+					<h1 id="fh5co-logo" style="font-size: 16px;text-align: start; font-weight: 700;"><a href="./">Igbo Women in West London</a></h1>
 					<!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
@@ -85,7 +85,8 @@
 							<li><a href="./about">About</a></li>
 							<li><a href="./gallery">Gallery</a></li>
 							<li><a href="./blog">Blog</a></li>
-							<li class="active"><a href="./contact">Contact us</a></li>
+							<li style="padding-right: 30px;" class="active"><a href="./contact">Contact us</a></li>
+							<li><span><a class="btn btn-primary btn-lg" href="#" style="color: white;">Donate Now</a></span></li>
 						</ul>
 					</nav>
 				</div>
@@ -95,14 +96,15 @@
 		
 		<div id="fh5co-contact" class="animate-box">
 			<div class="container">
-				<form action="#">
+				<div >
 					<div class="row">
 						<div class="col-md-6">
-							<h3 class="section-title">Reach out to us</h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aliquam tempore corporis, harum voluptas corrupti dicta pariatur mollitia dolore perferendis!</p>
+							<h1 class="section-title">Reach out to us</h1>
+							
+							<p>Please feel free to contact us for any inquiries, assistance you may need  or donations.</p>
 							<ul class="contact-info">
-								<li><i class="icon-location-pin"></i>198 West 21th Street, Suite 721 New York NY 10016</li>
-								<li><i class="icon-phone2"></i>+ 1235 2355 98</li>
+								<li><i class="icon-location-pin"></i>No 10 Quince House, High Street Feltham, TW134GF </li>
+								<li><i class="icon-phone2"></i><a href="tel:079496">07949659197</a></li>
 								<li><i class="icon-mail"></i><a href="mailto:hello@iwwl.org" target="_blank">hello@iwwl.org</a></li>
 								<li><i class="icon-globe2"></i><a href="https://iwwl.org/">www.iwwl.org</a></li>
 							</ul>
@@ -111,28 +113,32 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Name">
+										<input type="text" class="form-control" placeholder="Name" id="name">
+										<p style="color: red; font-size: 12px; margin-top: 10px; margin-left: 5px; display: none;" id="nameError"></p>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Email">
+										<input type="text" class="form-control" placeholder="Email" id="email">
+										<p style="color: red; font-size: 12px; margin-top: 10px; margin-left: 5px; display: none;" id="emailError"></p>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
+										<textarea name=""  class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
+										<p style="color: red; font-size: 12px; margin-top: 10px; margin-left: 5px; display: none;" id="messageError"></p>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<input type="submit" value="Send Message" class="btn btn-primary">
+										<button class="btn btn-primary" id="btn" >Send Message</button>
+										<p style="color: red; font-size: 12px; margin-top: 10px; margin-left: 5px; display: none;" id="btnError"></p>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</form>
+				</div>
 			</div>
 		</div>
 
@@ -144,6 +150,12 @@
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 text-center">
 							
+							<p class="fh5co-social-icons">
+								<a href="#"><i class="icon-facebook2"></i></a>
+								<a href="#"><i class="icon-instagram"></i></a>
+								<a href="#"><i class="icon-youtube"></i></a>
+							</p>
+
 							<p>Copyright 2023 IWWL. All Rights Reserved</p>
 						</div>
 					</div>
@@ -178,6 +190,10 @@
 	
 	<!-- Main JS -->
 	<script src="js/main.js"></script>
+	<script src="./js/cnt.js"></script>
+
+	<script src="https://smtpjs.com/v3/smtp.js">
+	</script>
 
 	</body>
 </html>
